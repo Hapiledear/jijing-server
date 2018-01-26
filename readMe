@@ -1,0 +1,11 @@
+batch: 定时任务
+controller: http请求响应
+scrapy: 对外http请求
+
+创建数据库时指定编码格式：  DEFAULT CHARACTER SET utf8
+pip3 install ConfigParser -i https://pypi.douban.com/simple
+后台运行 setsid python3 Main.py
+查询进程 ps -ef | grep WeChatRobot
+
+
+#todo
