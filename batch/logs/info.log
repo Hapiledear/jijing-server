@@ -1,0 +1,41 @@
+2018-01-20 15:12:49,870 - INFO || __main__ - <module> - ||批处理任务，启动成功！ 
+2018-01-20 17:02:13,527 - INFO || __main__ - <module> - ||批处理任务，启动成功！ 
+2018-01-20 17:03:37,868 - INFO || __main__ - <module> - ||批处理任务，启动成功！ 
+2018-01-20 17:04:25,618 - INFO || __main__ - <module> - ||批处理任务，启动成功！ 
+2018-01-20 17:04:25,777 - INFO || __main__ - add_job - ||Adding job tentatively -- it will be properly scheduled when the scheduler starts 
+2018-01-20 17:04:25,777 - INFO || __main__ - add_job - ||Adding job tentatively -- it will be properly scheduled when the scheduler starts 
+2018-01-20 17:04:25,779 - INFO || __main__ - _real_add_job - ||Added job "基金查询_预估值" to job store "default" 
+2018-01-20 17:04:25,779 - INFO || __main__ - _real_add_job - ||Added job "基金查询_预估值" to job store "default" 
+2018-01-20 17:04:25,779 - INFO || __main__ - start - ||Scheduler started 
+2018-01-20 17:04:59,348 - INFO || __main__ - shutdown - ||Scheduler has been shut down 
+2018-01-21 12:30:39,573 - INFO || __main__ - <module> - ||批处理任务，启动成功！ 
+2018-01-21 12:31:06,039 - INFO || __main__ - <module> - ||批处理任务，启动成功！ 
+2018-01-21 12:31:06,198 - INFO || __main__ - add_job - ||Adding job tentatively -- it will be properly scheduled when the scheduler starts 
+2018-01-21 12:31:06,200 - INFO || __main__ - _real_add_job - ||Added job "基金查询_预估值_test" to job store "default" 
+2018-01-21 12:31:06,200 - INFO || __main__ - start - ||Scheduler started 
+2018-01-21 12:31:30,033 - INFO || apscheduler.executors.default - run_job - ||Running job "基金查询_预估值_test (trigger: cron[second='0/30'], next run at: 2018-01-21 12:31:30 CST)" (scheduled at 2018-01-21 12:31:30+08:00) 
+2018-01-21 12:31:30,127 - ERROR || apscheduler.executors.default - run_job - ||Job "基金查询_预估值_test (trigger: cron[second='0/30'], next run at: 2018-01-21 12:32:00 CST)" raised an exception 
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/yanghuang/WeChatProject/jijing-server/scrapy/FundationGrowShedule.py", line 30, in scrapAndSaveFinMsg
+    time_9_30 = time.strptime("09:30", "hh:mm")
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/_strptime.py", line 559, in _strptime_time
+    tt = _strptime(data_string, format)[0]
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/_strptime.py", line 362, in _strptime
+    (data_string, format))
+ValueError: time data '09:30' does not match format 'hh:mm'
+2018-01-21 12:31:41,227 - INFO || __main__ - shutdown - ||Scheduler has been shut down 
+2018-01-21 12:33:13,605 - INFO || __main__ - <module> - ||批处理任务，启动成功！ 
+2018-01-21 12:33:13,772 - INFO || __main__ - add_job - ||Adding job tentatively -- it will be properly scheduled when the scheduler starts 
+2018-01-21 12:33:13,773 - INFO || __main__ - _real_add_job - ||Added job "基金查询_预估值_test" to job store "default" 
+2018-01-21 12:33:13,773 - INFO || __main__ - start - ||Scheduler started 
+2018-01-21 12:33:30,021 - INFO || apscheduler.executors.default - run_job - ||Running job "基金查询_预估值_test (trigger: cron[second='0/30'], next run at: 2018-01-21 12:33:30 CST)" (scheduled at 2018-01-21 12:33:30+08:00) 
+2018-01-21 12:33:30,071 - ERROR || apscheduler.executors.default - run_job - ||Job "基金查询_预估值_test (trigger: cron[second='0/30'], next run at: 2018-01-21 12:34:00 CST)" raised an exception 
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/yanghuang/WeChatProject/jijing-server/scrapy/FundationGrowShedule.py", line 32, in scrapAndSaveFinMsg
+    if now_time < time_9_30 or now_time > time_13_00:
+TypeError: '<' not supported between instances of 'float' and 'time.struct_time'
+2018-01-21 12:33:41,896 - INFO || __main__ - shutdown - ||Scheduler has been shut down 
